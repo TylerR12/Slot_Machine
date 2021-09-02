@@ -55,9 +55,7 @@ function submitA(){
 function spin(){
     bets();
     generateNum();
-    // display1();
-    // display2();
-    // display3();
+
     winnings();
 
 
