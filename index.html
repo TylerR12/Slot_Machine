@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-analytics.js"></script>
+
+</head>
+<body onload="load()">
+    <script src="JS/slot.js"></script>
+
+<div id="addon" class="addon">
+    <h1 class="addTXT">ADD Amount</h1>
+    <br><br><br><br><br>
+    <h2 class="amountTXT">Amount:</h2>
+    <input type="number" value="350" name="" id="addAmount" class="addAmount">
+    <br><br><br><br>
+    <button class="submitAmount" onclick="submitA()"> ADD </button>
+</div>
+
+<div class="top">
+    <!-- Prize -->
+    <table class="prize">
+        <tr>        
+            <td>
+                <div class="prizeCherries" id="rewards">
+                <img src="cherry.png" alt="cherry" class="cherryPrize" id="cherryPrize"> 
+                <img src="cherry.png" alt="cherry" class="cherryPrize" id="cherryPrize">
+                <img src="cherry.png" alt="cherry" class="cherryPrize" id="cherryPrize"><b>100</b>
+            </div>
+            </td>
+                
+            <td><div class="prizeWatermelons" id="rewards">
+                <img src="watermelon.png" alt="watermelon" class="watermelonPrize" id="watermelonPrize">
+                <img src="watermelon.png" alt="watermelon" class="watermelonPrize" id="watermelonPrize">
+                <img src="watermelon.png" alt="watermelon" class="watermelonPrize" id="watermelonPrize"><b>250</b>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="prizeHearts" id="rewards">
+                <img src="heart.png" alt="heart" class="heartPrize" id="heartPrize">
+                <img src="heart.png" alt="heart" class="heartPrize" id="heartPrize">
+                <img src="heart.png" alt="heart" class="heartPrize" id="heartPrize"><b>150</b>
+            </div></td>
+            <td><div class="prizeSevens" id="rewards">
+                <img src="seven.png" alt="single 7" class="sevenPrize" id="sevenPrize">
+                <img src="seven.png" alt="single 7" class="sevenPrize" id="sevenPrize">
+                <img src="seven.png" alt="single 7" class="sevenPrize" id="sevenPrize"><b>300</b>
+            </div></td>
+        </tr>
+        <tr>
+            <td><div class="prizeBars" id="rewards">
+            <img src="bar.png" alt="bar" class="barPrize" id="barPrize">
+            <img src="bar.png" alt="bar" class="barPrize" id="barPrize">
+            <img src="bar.png" alt="bar" class="barPrize" id="barPrize"><b>200</b>
+            </div></td>
+            <td><div class="prizeBlazing" id="rewards">
+            <img src="tri7.png" alt="triple 7" class="triPrize" id="triPrize">
+            <img src="tri7.png" alt="triple 7" class="triPrize" id="triPrize">
+            <img src="tri7.png" alt="triple 7" class="triPrize" id="triPrize"><b>350</b>
+            </div></td>
+        </tr>
+
+
+    </table>
+</div>
+    
+
+<div class="middle">
+    <!-- The Slot Machine -->
+    <div class="machine">
+
+        <div class="container">
+        <div class="firstVal">
+            <img src="cherry.png" alt="cherry" class="cherry" id="cherry1">
+            <img src="bar.png" alt="bar" class="bar" id="bar1">
+            <img src="watermelon.png" alt="watermelon" class="watermelon" id="watermelon1">
+            <img src="heart.png" alt="heart" class="heart" id="heart1">
+            <img src="tri7.png" alt="triple 7" class="tri" id="tri1">
+            <img src="seven.png" alt="single 7" class="seven" id="seven1">
+
+        </div>
+        <div class="secondVal">
+            <img src="cherry.png" alt="cherry" class="cherry" id="cherry2">
+            <img src="bar.png" alt="bar" class="bar" id="bar2">
+            <img src="watermelon.png" alt="watermelon" class="watermelon" id="watermelon2">
+            <img src="heart.png" alt="heart" class="heart" id="heart2">
+            <img src="tri7.png" alt="triple 7" class="tri" id="tri2">
+            <img src="seven.png" alt="single 7" class="seven" id="seven2">
+        </div>
+        <div class="thirdVal">
+            <img src="cherry.png" alt="cherry" class="cherry" id="cherry3">
+            <img src="bar.png" alt="bar" class="bar" id="bar3">
+            <img src="watermelon.png" alt="watermelon" class="watermelon" id="watermelon3">
+            <img src="heart.png" alt="heart" class="heart" id="heart3">
+            <img src="tri7.png" alt="triple 7" class="tri" id="tri3">
+            <img src="seven.png" alt="single 7" class="seven" id="seven3">
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="bottom">
+    <!-- Add button -->
+    <button class="addBTN" onclick="add()">Add</button>
+
+    <!-- Spin button -->
+    <button class="spin" onclick="spin()">Spin</button>
+    
+    <!-- Credits -->
+    <input type="number" name="" id="credit" class="credit" readonly="readonly">
+    
+    <!-- Bets -->
+    <input type="number" value="50" name="" id="bets" class="bets">
+
+    <!-- Winnings -->
+    <input type="number" value="0" name="" id="winnings" class="winnings" readonly="readonly">
+</div>
+
+<script>
+    $( ".credit" ).before( "CREDIT " );
+    $( ".bets" ).before( "BET " );
+    $( ".winnings" ).before( "WIN " );
+
+</script>
+
+</body>
+</html>

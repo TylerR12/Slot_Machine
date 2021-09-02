@@ -1,0 +1,195 @@
+/* body{
+    background: black url(background.jpg);
+    background-position: 0% 7%;
+} */
+
+body{
+    background: white;
+}
+
+
+/* darken background */
+
+/* add money menu */
+.addon{
+    display: none;
+    margin: 0 auto;
+    height: 350px;
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-style: solid;
+    background-color: white;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.addTXT{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.addAmount{
+    height: 40px;
+    width: 300px;
+    margin: auto;
+    display: block;
+}
+
+.submitAmount{
+    margin: auto;
+    display: block;
+}
+
+.amountTXT{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+/* prizes */
+.top{
+    margin: 0 auto;
+    height: 200px;
+    width: 700px;
+    border-style: solid;
+    display: block;
+    background: white;
+}
+
+#rewards{
+    height: 57px;
+    width: 340px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rewards > img{
+    height: 50px;
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* slot machine */
+.middle{
+    background: white;
+    margin: 0 auto;
+    height: 300px;
+    width: 700px;
+    border-style: solid;
+    display: block;
+}
+
+.container{
+    margin: 0 auto;
+    padding-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+}
+
+img{
+    margin: 0 auto;
+    height: auto;
+    width: 200px;
+}
+
+img.tri{
+    display: none;
+}
+
+img.seven{
+    /* display: none; */
+    height: 150px;
+    width: 175px;
+}
+
+img.bar{
+    display: none;
+}
+
+img.heart{
+    display: none;
+    height: 150px;
+    width: 175px;
+}
+
+img.cherry{
+    display: none;
+    height: 150px;
+    width: 175px;
+}
+
+img.watermelon{
+    display: none;
+}
+
+.firstVal{
+    height: 275px;
+    width: 200px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondVal{
+    height: 275px;
+    width: 200px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdVal{
+    height: 275px;
+    width: 200px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buttons */
+.bottom{
+    margin: 0 auto;
+    height: 200px;
+    width: fit-content;
+    border-style: solid;
+    border-color: transparent;
+    display: block;
+}
+
+fieldset{
+    height: fit-content;
+    width: fit-content;
+}
+
+input[type="text"]{
+    text-align: center;
+} 
+
+input[type="number"]{
+    text-align: center;
+} 
+
+/*work in progress*/
+.credit::after{
+    display: block;
+}
+
+.bets::after{
+    display: block;
+}
+
+.winnings::after{
+    display: block;
+}
+
