@@ -35,7 +35,6 @@ function load(){
 function add(){
     var screen = document.getElementById("addon");
     screen.style.display = "table";
-
 }
 
 function submitA(){
