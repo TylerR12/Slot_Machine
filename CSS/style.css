@@ -5,6 +5,11 @@
 
 body{
     background: white;
+    /* background-image: url("city.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
 }
 
 
@@ -17,7 +22,7 @@ body{
     height: 350px;
     width: 450px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
     border-style: solid;
@@ -174,11 +179,30 @@ fieldset{
 
 input[type="text"]{
     text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+} 
+
+div.bottom input[type="number"]{
+    margin: 0 auto 1em auto;
+    text-align:center;
+    /* display: block; */
+    padding: 5px;
+    height: 3em;
+    width: 10em;
+    font-size: 1.5em;
 } 
 
 input[type="number"]{
-    text-align: center;
-} 
+    text-align:center;
+}
+
+.winning-text{
+    height: 3em;
+    width: 20em;
+    font-size: 1.5em;
+}
 
 /*work in progress*/
 .credit::after{
@@ -192,4 +216,9 @@ input[type="number"]{
 .winnings::after{
     display: block;
 }
+
+/* .winnings{
+    height: 3em;
+    width: 8em;
+} */
 

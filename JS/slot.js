@@ -346,27 +346,31 @@ function winnings(){
     winnings = parseInt(winnings);
 
     if(value1 == "cherry" && value2 == "cherry" && value3 == "cherry"){
-        alert("You Win - three cherries");
+        // alert("You Win - three cherries");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Cherries";
         document.getElementById("winnings").value = 100;
         winnings = 100;
     }
     
     else if(value1 == "heart" && value2 == "heart" && value3 == "heart"){
-        alert("You Win - three hearts");
+        // alert("You Win - three hearts");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Hearts";
         document.getElementById("winnings").value = 150;
         winnings = 150;
 
     }
     
     else if(value1 == "bar" && value2 == "bar" && value3 == "bar"){
-        alert("You Win - three bars");
+        // alert("You Win - three bars");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Bars";
         document.getElementById("winnings").value = 200;
         winnings = 200;
 
     }
     
     else if(value1 == "watermelon" && value2 == "watermelon" && value3 == "watermelon"){
-        alert("You Win - three watermelons");
+        // alert("You Win - three watermelons");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Watermelons";
         document.getElementById("winnings").value = 250;
         winnings = 250;
 
@@ -374,20 +378,23 @@ function winnings(){
     }
     
     else if(value1 == "seven" && value2 == "seven" && value3 == "seven"){
-        alert("You Win - three sevens");
+        // alert("You Win - three sevens");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Sevens";
         document.getElementById("winnings").value = 300;
         winnings = 300;
 
     }
     
     else if(value1 == "blazing7" && value2 == "blazing7" && value3 == "blazing7"){
-        alert("You Win - three blazing sevens");
+        // alert("You Win - three blazing sevens");
+        document.getElementById("winning-text").value = "Congratulations, You Win! - Three Blazing Sevens";
         document.getElementById("winnings").value = 350;
         winnings = 350;
 
     }
     else{
         document.getElementById("winnings").value = 0;
+        document.getElementById("winning-text").value = "";
         winnings = 0;
         
     }
