@@ -164,12 +164,11 @@ img.watermelon{
 
 /* buttons */
 .bottom{
-    margin: 0 auto;
-    height: 200px;
-    width: fit-content;
-    border-style: solid;
-    border-color: transparent;
-    display: block;
+    margin: auto 0;
+    /* height: 250px; */
+    /* width: fit-content; */
+    /* display: block; */
+    text-align: center;
 }
 
 fieldset{
@@ -179,9 +178,9 @@ fieldset{
 
 input[type="text"]{
     text-align: center;
-    position: absolute;
+    /*position: absolute;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%,0); */
 } 
 
 div.bottom input[type="number"]{
