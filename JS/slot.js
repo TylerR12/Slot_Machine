@@ -340,39 +340,60 @@ function display3(return3){
 
 }
 
+function bets(){
+    var bets = document.getElementById("bets").value;
+    bets = parseInt(bets);
+
+    var currentCredit = document.getElementById("credit").value;
+    currentCredit = parseInt(currentCredit);
+
+    if( (currentCredit - bets ) < 0){
+        alert("cannot afford");
+        window.location.reload();
+    }
+    else{
+        document.getElementById("credit").value = currentCredit - bets;
+        console.log(currentCredit - bets);
+        
+    }
+}
+
 
 function winnings(){
     var winnings = document.getElementById("winnings").value;
+    var bets = document.getElementById("bets").value;
+    bets = parseInt(bets);
     winnings = parseInt(winnings);
+    console.log("bet: "+ bets);
 
     if(value1 == "cherry" && value2 == "cherry" && value3 == "cherry"){
         // alert("You Win - three cherries");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Cherries";
-        document.getElementById("winnings").value = 100;
-        winnings = 100;
+        document.getElementById("winnings").value = bets + 100;
+        winnings = bets + 100;
     }
     
     else if(value1 == "heart" && value2 == "heart" && value3 == "heart"){
         // alert("You Win - three hearts");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Hearts";
-        document.getElementById("winnings").value = 150;
-        winnings = 150;
+        document.getElementById("winnings").value = bets + 150;
+        winnings = bets + 150;
 
     }
     
     else if(value1 == "bar" && value2 == "bar" && value3 == "bar"){
         // alert("You Win - three bars");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Bars";
-        document.getElementById("winnings").value = 200;
-        winnings = 200;
+        document.getElementById("winnings").value = bets + 200;
+        winnings = bets + 200;
 
     }
     
     else if(value1 == "watermelon" && value2 == "watermelon" && value3 == "watermelon"){
         // alert("You Win - three watermelons");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Watermelons";
-        document.getElementById("winnings").value = 250;
-        winnings = 250;
+        document.getElementById("winnings").value = bets + 250;
+        winnings = bets + 250;
 
 
     }
@@ -380,16 +401,16 @@ function winnings(){
     else if(value1 == "seven" && value2 == "seven" && value3 == "seven"){
         // alert("You Win - three sevens");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Sevens";
-        document.getElementById("winnings").value = 300;
-        winnings = 300;
+        document.getElementById("winnings").value = bets + 300;
+        winnings = bets + 300;
 
     }
     
     else if(value1 == "blazing7" && value2 == "blazing7" && value3 == "blazing7"){
         // alert("You Win - three blazing sevens");
         document.getElementById("winning-text").value = "Congratulations, You Win! - Three Blazing Sevens";
-        document.getElementById("winnings").value = 350;
-        winnings = 350;
+        document.getElementById("winnings").value = bets + 350;
+        winnings = bets + 350;
 
     }
     else{
